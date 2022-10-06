@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/eduardo-paes/CopetSystem/compare/v1.1.0...v1.1.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* change api package.json settings ([aec71bc](https://github.com/eduardo-paes/CopetSystem/commit/aec71bc2e6ad3f9737f5ef280921e36e558f27ad))
+
 ## 1.1.0 (2022-10-06)
 
 
