@@ -7,7 +7,7 @@
   "author": "Eduardo Paes Silva <eduardo.silva@aluno.cefet-rj.br>; Thiago Paes Silva <thiago.paes@aluno.cefet-rj.br>",
   "license": "MIT",
   "scripts": {
-    "release": "standar-version"
+    "release": "standard-version"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
