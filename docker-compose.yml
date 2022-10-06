@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres
+    container_name: copet-system-db
+    environment:
+      POSTGRES_PASSWORD: Copet@123
+      POSTGRES_USER: copet-admin
+      POSTGRES_DB: COPET_DB
+    ports:
+      - 5432:5432
+
+  # # Container API
+  # api:
+  #   depends_on:
+  #     - db
+  #   image: copet-system-api:dev
+  #   container_name: copet-system-api
+  #   restart: always
+  #   build:
+  #     context: CopetSystem.API/.
+  #     dockerfile: dockerfile.dev
+  #   ports:
+  #     - 3000:3000
+
+  # # Container Web
+  # web:
+  #   depends_on:
+  #     - api
+  #   stdin_open: true
+  #   image: copet-system-web:dev
+  #   container_name: copet-system-web
+  #   build:
+  #     context: CopetSystem.Web/.
+  #     dockerfile: dockerfile.dev
+  #   ports:
+  #     - 5173:5173
