@@ -16,7 +16,7 @@
     Quando eu inserir meus dados de cadastro na página, havendo alguma informação inválida
     Então minha conta não será criada.
 
-## Funcionalidade - Visualizar Projetos
+## Funcionalidade - Visualizar projetos
   Feature: Visualizar meus Projetos
     Como professor logado na plataforma
     Quero acessar a página de Projetos PIBIC
@@ -154,3 +154,18 @@
     E seleciono a opção de salvar
     Então a ressubmissão é concluída com sucesso
     E o projeto retorna para o status de Em Análise.
+
+
+## Dúvidas:
+### Etapas do Projeto: Abertura, Submissão, Avaliação, (Recurso?, Cancelamento?), Entrega de Documentos, Encerramento.
+### Até qual etapa podem ocorrer alterações do projeto?
+### Que tipo de alterações são permitidas?
+### As informações bancárias do aluno só serão cadastradas na etapa de Entrega de Documentos?
+### Será possível alterar o aluno depois disso?
+### Quando os relatórios parciais deverão ser entregues?
+### Há algum outro documento que deverá ser entregue de forma periódica?
+### Quem deverá entregar tais documentos-relatórios?
+### O relatório final deverá ser entregue apenas na etapa de encerramento?
+### O avaliador é também um professor, isto é, poderá criar projetos?
+### Cada professor deve estar associado a alguma área? Se sim, quais são essas áreas?
+### O avaliador só poderár avaliar projetos de sua área?
