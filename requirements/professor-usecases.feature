@@ -16,113 +16,141 @@
     Quando eu inserir meus dados de cadastro na página, havendo alguma informação inválida
     Então minha conta não será criada.
 
-## Funcionalidade - Visualizar submissões
-  Feature: Visualizar submissões ao PIBIC
+## Funcionalidade - Visualizar Projetos
+  Feature: Visualizar meus Projetos
     Como professor logado na plataforma
-    Quero acessar a página de Submissões do PIBIC
-    Para visualizar minhas submissões ao PIBIC.
+    Quero acessar a página de Projetos PIBIC
+    Para visualizar meus projetos abertos ou encerrados.
 
-  Scenario: Acessar a página de gerenciamento das minhas submissões 
+  Scenario: Acessar a página de gerenciamento dos meus projetos 
     Dado que estou logado na plataforma
-    Quando seleciono a opção de acesso à página de Submissões do PIBIC
-    Então sou direcionado para a página de Submissões do PIBIC.
+    Quando seleciono a opção de acesso à página de Projetos PIBIC
+    Então sou direcionado para a página de Projetos PIBIC.
 
-  Scenario: Visualizar minhas submissões ao PIBIC em aberto
-    Dado que estou na página de submissões ao PIBIC
-    Quando seleciono a aba de Submissões em Aberto
-    Então são listadas todas as minhas submissões em andamento.
+  Scenario: Visualizar meus projetos PIBIC em andamento
+    Dado que estou na página de projetos PIBIC
+    Quando seleciono a aba de Projetos em Andamento
+    Então são listados todos os meus projetos em andamento.
 
-  Scenario: Visualizar minhas submissões ao PIBIC encerradas
-    Dado que estou na página de submissões ao PIBIC
-    Quando seleciono a aba de Submissões Encerradas
-    Então são listadas todas as minhas submissões encerradas.
+  Scenario: Visualizar meus projetos PIBIC encerrados
+    Dado que estou na página de projetos PIBIC
+    Quando seleciono a aba de Projetos Encerrados
+    Então são listados todos os meus projetos encerrados.
 
-  Scenario: Acompanhar andamento das minhas submissões
-    Dado que estou na página de submissões ao PIBIC
-    Quando seleciono a aba de Submissões em Aberto 
-    E estão sendo listadas as minhas submissões em aberto
-    E seleciono a opção de Visualizar Parecer de uma submissão
-    Então me é informado detalhes sobre o status e parecer da minha submissão.
+  Scenario: Acompanhar andamento dos meus projetos
+    Dado que estou na página de projetos PIBIC
+    Quando seleciono a aba de Projetos em Aberto 
+    E estão sendo listados os meus projetos em aberto
+    E seleciono a opção de Visualizar Parecer de um projeto
+    Então me é informado detalhes sobre o status e parecer do meu projeto.
 
-## Funcionalidade - Criar submissões
-  Feature: Criar submissões ao PIBIC
+## Funcionalidade - Criar projetos
+  Feature: Criar projetos PIBIC
     Como professor logado na plataforma
-    Quero acessar as páginas de Criação de Submissões do PIBIC
-    Para criar minhas submissões ao PIBIC.
+    Quero acessar as páginas de Criação de Projetos PIBIC
+    Para criar meus projetos PIBIC.
 
-  Scenario: Acessar página de criação de submissão
-    Dado que estou na página de submissões ao PIBIC
-    Quando seleciono a opção de Criar uma nova submissão
-    Então sou direcionado para a página de Criar Submissão.
+  Scenario: Acessar página de criação de projeto
+    Dado que estou na página de projetos PIBIC
+    Quando seleciono a opção de Criar Projeto
+    Então sou direcionado para a página de Criar Projeto.
 
-  Scenario: Criar uma submissão com sucesso
-    Dado que estou na página de Criar uma nova submissão ao PIBIC
+  Scenario: Criar um projeto com sucesso
+    Dado que estou na página de Criar Projeto PIBIC
     Quando preencho todos os campos obrigatórios com dados válidos
-    E faço o upload de forma válida de todos os arquivos solicitados
-    E associo à submissão um aluno com um cadastro válido na plataforma
-    E seleciono a opção de salvar submissão
-    Então recebo a informação de que minha submissão foi salva com sucesso
-    E sou direcionado para a página de visualizar minhas submissões.
+    E seleciono a opção de salvar projeto
+    Então recebo a informação de que meu projeto foi aberto com sucesso
+    E sou direcionado para a página de visualizar meus projetos.
 
-  Scenario: Criar uma submissão com pendência
-    Dado que estou na página de Criar uma nova submissão ao PIBIC
-    Quando preencho todos os campos obrigatórios com dados válidos
-    E faço o upload de forma válida de todos os arquivos solicitados
-    E associo à submissão um aluno sem um cadastro válido na plataforma
-    E seleciono a opção de salvar submissão
-    Então recebo a informação de que minha submissão aguarda que o aluno conclua seu cadastro
-    E o aluno recebe um e-mail com o link para concluir seu cadastro
-    E sou direcionado para a página de visualizar minhas submissões.
-
-## Funcionalidade - Alterar submissões
-  Feature: Alterar submissões ao PIBIC
+## Funcionalidade - Submeter projetos
+  Feature: Submeter projetos PIBIC
     Como professor logado na plataforma
-    Quero acessar as páginas de Edição de Submissões do PIBIC
-    Para alterar minhas submissões ao PIBIC.
+    Quero acessar as páginas de Submissão de Projeto PIBIC
+    Para submeter meu projeto PIBIC em aberto.
 
-  Scenario: Acessar página de edição de submissão
-    Dado que estou na página de submissões ao PIBIC e tendo selecionado a aba de Submissões em Aberto
-    Quando identifico a submissão que desejo alterar
-    E seleciono a opção de Editar a submissão
-    Então sou direcionado para a página de Editar Submissão.
+  Scenario: Acessar página de submissão
+    Dado que estou na página de Projetos PIBIC
+    Quando seleciono meu projeto com status Aberto
+    E seleciono a opção de Submeter
+    Então sou direcionado para a página de Submeter Projeto.
 
-  Scenario: Alterar uma submissão com sucesso
-    Dado que estou na página de Editar uma submissão ao PIBIC
+  Scenario: Submeter um projeto com sucesso
+    Dado que estou na página de Submeter Projeto PIBIC
+    Quando preencho todos os campos obrigatórios com dados válidos
+    E indico o aluno que fará parte do projeto
+    E seleciono a opção de salvar
+    Então recebo a informação de que meu projeto foi submetido com sucesso
+    E sou direcionado para a página de visualizar meus projetos.
+
+  Scenario: Submeter um projeto indicando um aluno COM cadastro na plataforma
+    Dado que estou na página de Submeter Projeto PIBIC
+    Quando preencho todos os campos obrigatórios com dados válidos
+    E indico o aluno com cadastro na plataforma que fará parte do projeto
+    E seleciono a opção de salvar
+    Então recebo a informação de que meu projeto foi submetido com sucesso
+    E sou direcionado para a página de visualizar meus projetos.
+
+  Scenario: Submeter um projeto indicando um aluno SEM cadastro na plataforma
+    Dado que estou na página de Submeter Projeto PIBIC
+    Quando preencho todos os campos obrigatórios com dados válidos
+    E indico o aluno sem cadastro na plataforma que fará parte do projeto
+    E seleciono a opção de salvar
+    Então recebo a informação de que meu projeto foi submetido com sucesso
+    E o aluno recebe um e-mail para criar seu cadastro na plataforma informando apenas seus dados básicos
+    E sou direcionado para a página de visualizar meus projetos.
+
+## Funcionalidade - Alterar projetos
+  Feature: Alterar projetos PIBIC
+    Como professor logado na plataforma
+    Quero acessar as páginas de Edição de Projeto do PIBIC
+    Para alterar meu projeto PIBIC em andamento.
+
+  Scenario: Acessar página de edição de projeto
+    Dado que estou na página de projetos PIBIC
+    E tendo selecionado a aba de Projetos em Andamento
+    Quando identifico o projeto que desejo alterar
+    E seleciono a opção de Editar
+    Então sou direcionado para a página de Editar Projeto.
+
+  Scenario: Alterar um projeto com sucesso
+    Dado que estou na página de Editar uma projeto PIBIC
     Quando altero alguns campos permitidos com dados válidos
-    E faço o upload de forma válida de novos arquivos
-    E associo à submissão um novo aluno com um cadastro válido na plataforma
-    E seleciono a opção de salvar submissão
-    Então recebo a informação de que minha submissão foi alterada com sucesso
-    E sou direcionado para a página de visualizar minhas submissões.
+    E seleciono a opção de salvar projeto
+    Então recebo a informação de que meu projeto foi alterado com sucesso
+    E sou direcionado para a página de visualizar meus projetos.
 
-  Scenario: Alterar uma submissão com pendência
-    Dado que estou na página de Editar uma submissão ao PIBIC
-    Quando altero alguns campos permitidos com dados válidos
-    E faço o upload de forma válida de novos arquivos
-    E associo à submissão um novo aluno sem um cadastro válido na plataforma
-    E seleciono a opção de salvar submissão
-    Então recebo a informação de que minha submissão aguarda que o aluno conclua seu cadastro
-    E o aluno recebe um e-mail com o link para concluir seu cadastro
-    E sou direcionado para a página de visualizar minhas submissões.
+  Scenario: Alterar um projeto indicando um aluno COM cadastro na plataforma
+    Dado que estou na página de Editar uma projeto PIBIC
+    Quando indico no projeto um outro aluno com cadastro na plataforma
+    E seleciono a opção de salvar projeto
+    Então recebo a informação de que meu projeto foi alterado com sucesso
+    E sou direcionado para a página de visualizar meus projetos.
+
+  Scenario: Alterar um projeto indicando um aluno SEM cadastro na plataforma
+    Dado que estou na página de Editar uma projeto PIBIC
+    Quando indico no projeto um outro aluno sem cadastro na plataforma
+    E seleciono a opção de salvar projeto
+    Então recebo a informação de que meu projeto foi alterado com sucesso
+    E o aluno recebe um e-mail para criar seu cadastro na plataforma informando apenas seus dados básicos
+    E sou direcionado para a página de visualizar meus projetos.
 
 ## Funcionalidade - Realizar ressubmissões
-  Feature: Realizar a ressubmissões de submissões indeferidas ao PIBIC
+  Feature: Realizar a ressubmissão de projetos PIBIC indeferidos
     Como professor logado na plataforma
-    Quero acessar a página de Submissões ao PIBIC
-    Para realizar a ressubmissão de submissões indeferidas.
+    Quero acessar a página de Projetos PIBIC
+    Para realizar a ressubmissão de projetos indeferidos.
 
-  Scenario: Acessar página de ressubmissão de uma submissão indeferida
-    Dado que estou na página de submissões ao PIBIC
-    Quando seleciono a aba de Submissões em Aberto 
-    E estão sendo listadas as minhas submissões em aberto
-    E seleciono a opção de Visualizar Parecer de uma submissão cujo status está como Indeferida
+  Scenario: Acessar página de ressubmissão de uma projeto indeferido
+    Dado que estou na página de projetos PIBIC
+    Quando seleciono a aba de Projetos em Andamento 
+    E estão sendo listados as meus projetos em aberto
+    E seleciono a opção de Visualizar Parecer de uma projeto cujo status está como Indeferido
     E seleciono a opção de Ressubmeter 
     Então sou redirecionado para a página de Ressubmissão.
 
   Scenario: Realizar uma ressubmissão com sucesso
-    Dado que estou na página de Ressubmissão de uma submissão indeferida ao PIBIC
-    Quando realizo alteração dos campos da submissão com dados válidos
-    E reenvio os documentos válidos que são necessários de acordo com o parecer da submissão
+    Dado que estou na página de Ressubmissão de uma projeto PIBIC indeferido
+    Quando realizo alteração dos campos do projeto com dados válidos, de acordo com o parecer do projeto
     E seleciono a opção de salvar
     Então a ressubmissão é concluída com sucesso
-    E a submissão retorna para o status de Em Análise.
+    E o projeto retorna para o status de Em Análise.
