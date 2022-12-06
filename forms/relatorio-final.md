@@ -9,5 +9,5 @@
     - PIBIC-EM (Ensino Médio)
   - Projeto (Project Class)
   - Aluno (Student Class)
-  - Orientador (Teacher Class)
+  - Orientador (Professor Class)
   - RelatorioIC (File)
