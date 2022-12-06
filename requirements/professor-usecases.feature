@@ -77,16 +77,17 @@
   Scenario: Submeter um projeto com sucesso
     Dado que estou na página de Submeter Projeto
     Quando preencho todos os campos obrigatórios com dados válidos
-    E indico o aluno que fará parte do projeto
+    # E indico o aluno que fará parte do projeto (opcional)
     E seleciono a opção de salvar
     Então recebo a informação de que meu projeto foi submetido com sucesso
     E meu projeto passa para o status de Em Avaliação
     E sou direcionado para a página de visualizar meus projetos.
 
+  # Indicação de aluno é opcional, torna-se obrigatória após a aprovação do projeto
   Scenario: Submeter um projeto indicando um aluno COM cadastro na plataforma
     Dado que estou na página de Submeter Projeto
     Quando preencho todos os campos obrigatórios com dados válidos
-    E indico o aluno com cadastro na plataforma que fará parte do projeto
+    E indico o aluno com cadastro na plataforma que fará parte do projeto 
     E seleciono a opção de salvar
     Então recebo a informação de que meu projeto foi submetido com sucesso
     E sou direcionado para a página de visualizar meus projetos.
@@ -155,7 +156,7 @@
     Então recebo a informação de que meu projeto foi cancelado com sucesso
     E sou direcionado para a página de visualizar meus projetos.
 
-## Funcionalidade - Ressubmeter projetos
+## Funcionalidade - Ressubmeter projetos (Recurso)
   Feature: Realizar a ressubmissão de projetos indeferidos
     Como professor logado na plataforma
     Quero acessar a página de Projetos
@@ -166,12 +167,13 @@
     Quando seleciono a aba de Projetos em Andamento 
     E estão sendo listados meus projetos em aberto
     E seleciono a opção de Visualizar Parecer de um projeto cujo status está como Indeferido
-    E seleciono a opção de Ressubmeter 
+    E seleciono a opção de Ressubmeter (Recurso)
     Então sou redirecionado para a página de Ressubmissão.
 
+  # Nenhuma informação do projeto pode ser alterada nessa etapa
   Scenario: Realizar uma ressubmissão com sucesso
     Dado que estou na página de Ressubmissão de um projeto indeferido
-    Quando realizo alteração dos campos do projeto com dados válidos, de acordo com o parecer do projeto
+    Quando preencho o motivo de Recurso
     E seleciono a opção de salvar
     Então a ressubmissão é concluída com sucesso
     E meu projeto retorna para o status de Em Avaliação
@@ -183,6 +185,7 @@
     Quero acessar a página de Projetos
     Para realizar a Entrega de Documentos de um projeto deferido.
 
+  # Indicação de aluno é obrigatório nesta etapa, caso o aluno ainda não tenha sido associado ao projeto
   Scenario: Acessar página de Entrega de Documento de um projeto Deferido
     Dado que estou na página de projetos
     Quando seleciono a aba de Projetos em Andamento 
@@ -263,32 +266,3 @@
     E seleciono a opção de salvar
     Então a entrega de relatório final é realizada com sucesso
     E sou direcionado para a página de visualizar meus projetos.
-
-## Dúvidas:
-### Etapas do Projeto: Abertura, Submissão, Avaliação, (Recurso?, Cancelamento?), Entrega de Documentos, Encerramento.
-### Até qual etapa podem ocorrer alterações do projeto?
-### Que tipo de alterações são permitidas?
-### As informações bancárias do aluno só serão cadastradas na etapa de Entrega de Documentos?
-### Será possível alterar o aluno depois disso?
-### Quando os relatórios parciais deverão ser entregues?
-### Há algum outro documento que deverá ser entregue de forma periódica?
-### Quem deverá entregar tais documentos-relatórios?
-### O relatório final deverá ser entregue apenas na etapa de encerramento?
-### O avaliador é também um professor, isto é, poderá criar projetos?
-### Cada professor deve estar associado a alguma área? Se sim, quais são essas áreas?
-### O avaliador só poderár avaliar projetos de sua área?
-
-## Status do Projeto:
-### Aberto: neste status os dados do projeto devem ser completamente preenchidos para ser Submetido;
-### Avaliação: neste status o projeto foi Submetido e se encontra disponível para avaliação por parte do Avaliador;
-### Indeferido: quando o avaliador Reprova um projeto, esse passa para o status de Indeferido e pode passar pelo processo de Ressubmissão dentro de um período de XX dias;
-### Deferido: neste status o projeto está pronto para receber os documentos necessários para ser iniciado - os documentos devem ser entregues dentro de um período de XX dias;
-### Análise: neste status o projeto já recebeu toda a documentação necessária e essa se encontra em análise pelo Avaliador;
-### Iniciado: neste status o projeto já recebeu toda a documentação necessária e essa foi aprovada;
-### Pendente: neste status o projeto já recebeu toda a documentação necessária, mas essa não foi aprovada - os documentos podem ser reenviados dentro de um período de XX dias;
-### Encerrado: neste status o projeto já foi concluído e o Orientador possui XX dias para entregar o Relatório Final, do contrário sua conta será suspensa por XX anos;
-### Cancelado: neste status o projeto foi cancelado por algum motivo:
-#### - Indeferido e sem ressubmissão;
-#### - Deferido, porém sem que os documentos fossem entregues no prazo;
-#### - Pendente, porém sem que os documentos fossem entregues no prazo;
-#### - Encerrado, porém sem que o Relatório Final fosse entregue dentro do prazo;

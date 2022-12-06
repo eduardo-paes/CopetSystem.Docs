@@ -1,4 +1,4 @@
-# Casos de uso do analista
+# Casos de uso do avaliador
 
 # TODO:
   # - ...

@@ -9,7 +9,8 @@
   # - Caso o administrador deseje tornar um professor um analista, basta alterar o perfil do professor para analista;
   # - (?) Todo analista possui as mesmas permissões de professor;
   # - (?) Todo administrador possui as mesmas permissões de analista;
+  # - CRUD GrandeArea, Area, SubArea, TipoPrograma, Edital.
 
   # Mapping: [User <> UserRole <> Role <> RolePermission <> Permission]
-  # Mapping Roles: [Student, Professor, Analyst, Admin]
+  # Mapping Roles: [Student, Professor, Approver, Admin]
   # Mapping Actions: [Read, Create, Update, Delete]
